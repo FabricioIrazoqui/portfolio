@@ -1,0 +1,29 @@
+/* Contenedor de la tarjeta */
+.cardWorks {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: flex;
+    width: 100%;
+    background-color: aqua;
+}
+
+/* Contenedor de la tarjeta (phone) */
+.phone {
+    background: #aaa;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    right: 10%;
+    top: 0;
+    transform: rotateX(80deg) rotateY(0deg) rotateZ(25deg);
+    transition: all 1s ease;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.phone:hover {
+    width: 900px; /* Tamaño al hacer hover */
+    height: 400px; /* Tamaño al hacer hover */
+    left: 50%;
+    transform: translate( -50%,15%) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); /* Centra y escala la tarjeta */
+}

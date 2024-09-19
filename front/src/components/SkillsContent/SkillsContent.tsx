@@ -1,0 +1,61 @@
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+
+interface Skill {
+    name: string;
+    icon?: JSX.Element | StaticImageData;
+}
+
+interface SkillSectionProps {
+    title: string;
+    logo?: StaticImageData;
+    skills: Skill[];
+}
+
+const SkillSection: React.FC<SkillSectionProps> = ({ title, logo, skills }) => {
+    return (
+        <div className="md:p-10 p-4">
+            <div>
+                <div className="flex gap-4 md:mb-8 mb-4 p-4 border-b-[0.5px]">
+                    <h2 className="md:text-5xl text-4xl TextShadow font-medium">
+                        {title}
+                    </h2>
+                    {logo && (
+                        <Image
+                            src={logo}
+                            alt={`${title} logo`}
+                            width={45}
+                            height={25}
+                            className="rounded-full bg-slate-100 p-2"
+                        />
+                    )}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-color3 p-4 md:p-8">
+                    {skills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className="flex items-center gap-4 w-3/4 m-auto"
+                        >
+                            {skill.icon ? (
+                                React.isValidElement(skill.icon) ? (
+                                    skill.icon
+                                ) : (
+                                    <Image
+                                        src={skill.icon as StaticImageData}
+                                        alt={`${skill.name} icon`}
+                                        width={100}
+                                        height={100}
+                                        className="filter drop-shadow-[2px_3px_5px_rgba(0,0,0,0.9)]"
+                                    />
+                                )
+                            ) : null}
+                            <p>{skill.name}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default SkillSection;

@@ -1,0 +1,49 @@
+.custom-svg {
+    width: 100px;
+    height: 100px;    
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+.bg-fff{
+    background-color: #fff;
+}
+.custom-bg{
+    fill: #fff;
+}
+.custom-Js {
+    fill: #f7df1e;
+}
+.custom-Ts {
+    fill: #3178C6;
+}
+.custom-Pg-bg{
+    background-color: #4169E1;
+}
+.custom-Mdb-bg{
+    background-color: #47A248;
+}
+.custom-ex{
+    background-color: #000000;
+}
+.custom-nest{
+    background-color: #E0234E;
+}
+.custom-prisma{
+    fill: #000000;
+}
+.custom-docker{
+    fill: #2496ED;
+}
+.custom-swagger{
+    background-color: #85EA2D;
+}
+.custom-react{
+    background-color: #61DAFB;
+}
+.custom-next{
+    background-color: #000000;
+}
+.custom-redux{
+    background-color: #764ABC;
+}
+

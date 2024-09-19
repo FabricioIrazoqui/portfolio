@@ -1,0 +1,6 @@
+.input:hover, .input:focus{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9),
+    inset 1px 1px 4px rgba(0, 0, 0, 0.9),
+    -1px -1px 4px rgba(255, 2, 2, 0.7),
+    inset -1px -1px 4px rgba(255, 2, 2, 0.7);
+}

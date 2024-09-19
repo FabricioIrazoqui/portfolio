@@ -1,0 +1,29 @@
+.list {
+    list-style-type: disc;
+    padding-left: 80px;
+}
+
+.list > li {
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.list li:first-child {
+    margin-top: 30px;
+}
+
+@media (max-width: 640px) {
+    .list {
+        padding-left: 40px; 
+        padding-right: 20px;
+    }
+
+    .list > li {
+        padding-left: 10px;
+        margin-bottom: 20px; 
+    }
+
+    .list li:first-child {
+        margin-top: 20px;
+    }
+}
