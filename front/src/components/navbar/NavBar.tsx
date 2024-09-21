@@ -1,31 +1,36 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
+import "./navbar.css";
 
 const NavBar: React.FC = () => {
+    const pathname = usePathname();
+
     return (
         <div className="">
-            <div className="bg-color4 p-4 gap-6 flex items-center justify-evenly max-w-2xl rounded-b-lg m-auto">
+            <div className="bg-color4 p-4 gap-6 flex items-center justify-evenly max-w-2xl rounded-b-lg m-auto font-bold TextShadow">
                 <Link
                     href="/"
-                    className="hover:text-blue-600 transition-colorsshadow-lg"
+                    className={`nav-link ${pathname === "/" ? "active" : ""}`}
                 >
                     About
                 </Link>
                 <Link
                     href="/works"
-                    className="hover:text-blue-600 transition-colors"
+                    className={`nav-link ${pathname === "/works" ? "active" : ""}`}
                 >
                     Works
                 </Link>
                 <Link
                     href="/experience"
-                    className="hover:text-blue-600 transition-colors"
+                    className={`nav-link ${pathname === "/experience" ? "active" : ""}`}
                 >
                     Experience
                 </Link>
                 <Link
                     href="/contact"
-                    className="hover:text-blue-600 transition-colors"
+                    className={`nav-link ${pathname === "/contact" ? "active" : ""}`}
                 >
                     Contact
                 </Link>

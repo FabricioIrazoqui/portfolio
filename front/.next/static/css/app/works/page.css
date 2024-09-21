@@ -19,7 +19,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
-    align-items: center;
   }
   
   .phone {
@@ -31,8 +30,6 @@
   }
   
   .carousel-indicators {
-    position: absolute;
-    bottom: -10px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -47,7 +44,7 @@
   }
   
   .indicator-active {
-    background-color: #333;
+    background-color: red;
   }
   
   .carousel-controls {
@@ -59,18 +56,13 @@
   
   .carousel-controls button {
     pointer-events: all;
-    background: none;
     border: none;
     cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
     transition: all 0.6s;
     border-radius: 100%;
   }
   
   .carousel-controls button:hover {
-    color: #000;
     font-weight: 600;
-    background: #fff;
   }
   

@@ -11,7 +11,6 @@ const Works = forwardRef<
 >(({ cards }, ref) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
-    // Verifica si hay tarjetas y establece la longitud total
     const totalCards = cards ? cards.length : 0;
 
     const goNext = () => {
@@ -29,13 +28,12 @@ const Works = forwardRef<
         goPrev,
     }));
 
-    // Si no hay tarjetas, se muestra un mensaje
     if (totalCards === 0) {
         return <div>No projects available.</div>;
     }
 
     return (
-        <div className="carousel-container md:h-[75vh] h-full">
+        <div className="carousel-container md:h-[77vh] h-full">
             <div
                 className="carousel-content"
                 style={{
@@ -53,7 +51,7 @@ const Works = forwardRef<
                     </div>
                 ))}
             </div>
-            <div className="carousel-indicators">
+            <div className="carousel-indicators fixed md:absolute md:-bottom-3 bottom-[10%]">
                 {cards.map((_, index) => (
                     <span
                         key={index}

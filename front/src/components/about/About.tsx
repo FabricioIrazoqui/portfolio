@@ -39,6 +39,7 @@ const About: React.FC = () => {
                             width={200}
                             height={200}
                             className="rounded-full md:size-[190px] size-40 md:mr-2"
+                            priority
                         />
                         <div className="flex flex-col justify-evenly items-start font-medium md:text-base text-sm">
                             <p>Fabricio Irazoqui</p>
