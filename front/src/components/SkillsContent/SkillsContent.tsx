@@ -30,11 +30,11 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, logo, skills }) => {
                         />
                     )}
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-color3 p-4 md:p-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-2 bg-color3 p-2 md:p-8">
                     {skills.map((skill, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-4 w-3/4 m-auto"
+                            className="flex items-center gap-1 md:gap-4 w-3/4 m-auto"
                         >
                             {skill.icon ? (
                                 React.isValidElement(skill.icon) ? (
@@ -45,7 +45,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, logo, skills }) => {
                                         alt={`${skill.name} icon`}
                                         width={100}
                                         height={100}
-                                        className="filter drop-shadow-[2px_3px_5px_rgba(0,0,0,0.9)]"
+                                        className="filter drop-shadow-[2px_3px_5px_rgba(0,0,0,0.9)] md:size-[100px] size-[35px]"
                                     />
                                 )
                             ) : null}

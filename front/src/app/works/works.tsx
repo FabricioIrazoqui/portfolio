@@ -10,8 +10,7 @@ const Works = forwardRef<
     WorksProps
 >(({ cards }, ref) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
-
-    const totalCards = cards ? cards.length : 0;
+    const totalCards = cards.length;
 
     const goNext = () => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % totalCards);
@@ -33,25 +32,18 @@ const Works = forwardRef<
     }
 
     return (
-        <div className="carousel-container md:h-[77vh] h-full">
-            <div
-                className="carousel-content"
-                style={{
-                    transform: `translateX(-${activeIndex * 100}%)`,
-                }}
-            >
+        <div className="carousel-container md:h-[75vh] relative">
+            <div className="carousel-content">
                 {cards.map((card, index) => (
                     <div
                         key={index}
-                        className={`cardWorks ${
-                            activeIndex === index ? "Active" : "phone"
-                        }`}
+                        className={`cardWorks ${activeIndex === index ? "Active" : ""}`}
                     >
                         {card}
                     </div>
                 ))}
             </div>
-            <div className="carousel-indicators fixed md:absolute md:-bottom-3 bottom-[10%]">
+            <div className="carousel-indicators fixed md:bottom-[10%] bottom-[11.5%] z-50">
                 {cards.map((_, index) => (
                     <span
                         key={index}
@@ -61,11 +53,9 @@ const Works = forwardRef<
                     ></span>
                 ))}
             </div>
-            <div className="carousel-controls"></div>
         </div>
     );
 });
 
 Works.displayName = "Works";
-
 export default Works;

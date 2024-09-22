@@ -10,7 +10,10 @@ const ParentComponent: React.FC = () => {
     );
     const proyects = Proyects;
     const cards = proyects?.map((proyect, key) => (
-        <div key={key} className="p-4 md:p-8 md:w-[90%]">
+        <div
+            key={key}
+            className=" md:w-[90%] w-screen h-full flex flex-col m-auto"
+        >
             {proyect.name ? (
                 <h2 className="md:text-4xl text-2xl TextShadow font-medium text-center md:mb-4 md:mt-4">
                     {proyect.name}
@@ -18,7 +21,7 @@ const ParentComponent: React.FC = () => {
             ) : (
                 ""
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center h-fit">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4 items-center justify-center h-fit overflow-y-auto">
                 <div className="">
                     {proyect.description ? (
                         <div className=" md:p-8 p-2 md:overflow-y-auto relative">
@@ -45,9 +48,9 @@ const ParentComponent: React.FC = () => {
                         </Link>
                     )}
                 </div>
-                <div className="grid grid-cols-2 gap-4 p-4 md:p-8 bg-color3 boxShadow rounded-xl md:overflow-y-auto">
+                <div className="grid grid-cols-2 gap-2 p-4 md:p-8 bg-color3 boxShadow rounded-xl md:overflow-y-auto w-fit m-auto">
                     {proyect.lenguajes ? (
-                        <div>
+                        <div className="flex flex-col w-fit">
                             <h2 className="md:text-2xl text-lg TextShadow font-medium  md:mb-2">
                                 Lenguajes
                             </h2>
@@ -151,16 +154,16 @@ const ParentComponent: React.FC = () => {
         <div className="relative">
             <Works ref={carouselRef} cards={cards} />
 
-            <div className="carousel-controls md:absolute fixed flex md:top-1/2 top-[95%] md:text-xl text-base md:text-white  text-black">
+            <div className=" md:text-xl text-base md:text-white  text-black z-10 ">
                 <button
                     onClick={prev}
-                    className="md:p-3 p-1 md:left-4 left-2 fixed md:absolute top-[87%] md:top-0 bg-white md:bg-transparent hover:bg-white md:hover:text-black"
+                    className="md:p-3 p-1 md:left-4 left-2 fixed  top-[84%] md:top-1/2 bg-white md:bg-transparent hover:bg-white md:hover:text-black rounded-full z-50"
                 >
                     Prev
                 </button>
                 <button
                     onClick={next}
-                    className="md:p-3 p-1 md:right-4 right-2 md:absolute fixed top-[87%] md:top-0 bg-white md:bg-transparent hover:bg-white md:hover:text-black"
+                    className="md:p-3 p-1 md:right-4 right-2  fixed top-[84%] md:top-1/2 bg-white md:bg-transparent hover:bg-white md:hover:text-black rounded-full z-50"
                 >
                     Next
                 </button>

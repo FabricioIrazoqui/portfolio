@@ -1,14 +1,35 @@
 "use client";
-import { FC, useRef } from "react";
-import { CSSTransition } from "react-transition-group";
-import NavBar from "@/components/navbar/NavBar";
 import { Footer } from "@/components/Footer/Footer";
-import "./globals.css";
+import NavBar from "@/components/navbar/NavBar";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { FC, useState, useEffect } from "react";
+import "./globals.css";
+
+const variants = {
+    initial: {
+        opacity: 0,
+        x: "-100%",
+    },
+    enter: {
+        opacity: 1,
+        x: "0%",
+        transition: { duration: 0.3 },
+    },
+    exit: {
+        opacity: 0,
+        x: "100%",
+        transition: { duration: 0.3 },
+    },
+};
 
 const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
-    const nodeRef = useRef(null);
     const pathname = usePathname();
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+    useEffect(() => {
+        setIsFirstLoad(false);
+    }, []);
 
     return (
         <html lang="en">
@@ -17,17 +38,17 @@ const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
                     <NavBar />
                 </header>
                 <main className="flex-grow overflow-auto">
-                    <CSSTransition
+                    <motion.div
                         key={pathname}
-                        timeout={300}
-                        classNames="page"
+                        initial={isFirstLoad ? false : "initial"}
+                        animate="enter"
+                        exit="exit"
+                        variants={variants}
                     >
-                        <div ref={nodeRef} className="page-content">
-                            {children}{" "}
-                        </div>
-                    </CSSTransition>
+                        {children}
+                    </motion.div>
                 </main>
-                <footer className="">
+                <footer>
                     <Footer />
                 </footer>
             </body>

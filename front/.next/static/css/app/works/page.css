@@ -2,67 +2,48 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/works/works.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************/
 .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .carousel-content {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
-  }
-  
-  .cardWorks {
-    min-width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-  }
-  
-  .phone {
-    opacity: 0.5;
-  }
-  
-  .Active {
-    opacity: 1;
-  }
-  
-  .carousel-indicators {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
-  }
-  
-  .indicator-active {
-    background-color: red;
-  }
-  
-  .carousel-controls {
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    pointer-events: none;
-  }
-  
-  .carousel-controls button {
-    pointer-events: all;
-    border: none;
-    cursor: pointer;
-    transition: all 0.6s;
-    border-radius: 100%;
-  }
-  
-  .carousel-controls button:hover {
-    font-weight: 600;
-  }
-  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  position: relative; /* Absoluto no es necesario si quieres mantener flujo flex */
+}
+
+.cardWorks {
+  min-width: 100%;
+  height: auto;
+  display: none; /* Oculta las tarjetas que no son activas */
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cardWorks.Active {
+  display: block; /* Solo la tarjeta activa es visible */
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 100%;
+  margin: 0 5px;
+}
+
+.indicator-active {
+  background-color: red;
+}
+

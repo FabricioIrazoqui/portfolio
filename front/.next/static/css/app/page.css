@@ -50,4 +50,9 @@
     background-color: #764ABC;
 }
 
-
+@media (max-width: 600px) {
+    .custom-svg {
+        width: 35px;
+        height: 35px;
+    }
+}
