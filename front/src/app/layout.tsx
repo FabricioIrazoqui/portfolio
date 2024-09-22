@@ -33,6 +33,10 @@ const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
 
     return (
         <html lang="en">
+            <head>
+                <title>Fabricio Irazoqui</title>
+                <meta name="Portfolio" content="Desarrollador Full Stack." />
+            </head>
             <body className="flex flex-col min-h-screen bg-color2 text-slate-100 text-sm md:text-base">
                 <header className="relative">
                     <NavBar />
