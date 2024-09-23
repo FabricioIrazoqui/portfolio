@@ -13,23 +13,23 @@ const About: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center max-w-5xl">
                     <div className="md:col-span-3 flex flex-col items-start md:items-start">
                         <p className="text-left md:text-left max-w-2xl p-4">
-                            <span className=" md:text-6xl md:text-red-700 md:font-semibold">
-                                I
-                                <span className=" md:text-4xl md:text-red-500">
-                                    am
-                                </span>
+                            <span className=" md:text-6xl text-2xl text-red-700 font-semibold">
+                                I am{" "}
                             </span>
-                            a Full Stack developer, and I love creating dynamic
-                            web applications. I am passionate about working on
-                            both the front-end and back-end, using modern
-                            technologies such as JavaScript, TypeScript, React,
-                            Node.js, and NestJS. I’m enthusiastic about
-                            designing attractive interfaces and developing
-                            efficient solutions with solid logic. I am
-                            constantly improving my skills to face new
-                            challenges, and I enjoy collaborating on innovative
-                            projects, always looking for opportunities to keep
-                            learning and growing professionally.
+                            <span className=" md:text-4xl text-xl text-red-500 font-semibold">
+                                a Full Stack developer{" "}
+                            </span>
+                            , and I love creating dynamic web applications. I am
+                            passionate about working on both the front-end and
+                            back-end, using modern technologies such as
+                            JavaScript, TypeScript, React, Node.js, and NestJS.
+                            I’m enthusiastic about designing attractive
+                            interfaces and developing efficient solutions with
+                            solid logic. I am constantly improving my skills to
+                            face new challenges, and I enjoy collaborating on
+                            innovative projects, always looking for
+                            opportunities to keep learning and growing
+                            professionally.
                         </p>
                     </div>
                     <div className="md:col-span-2 flex justify-evenly">
