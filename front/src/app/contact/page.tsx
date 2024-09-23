@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
             )}
             <div className="w-full max-w-md bg-color3 p-6 rounded-md">
                 <h2 className="md:text-3xl text-xl font-bold mb-4 text-center pb-8 TextShadow">
-                    Contact Us
+                    Contact Me
                 </h2>
                 <form
                     ref={form}

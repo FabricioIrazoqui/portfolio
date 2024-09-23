@@ -17,7 +17,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, logo, skills }) => {
         <div className="md:p-10 p-4">
             <div>
                 <div className="flex gap-4 md:mb-8 mb-4 p-4 border-b-[0.5px]">
-                    <h2 className="md:text-5xl text-4xl TextShadow font-medium">
+                    <h2 className="md:text-5xl text-3xl TextShadow font-medium">
                         {title}
                     </h2>
                     {logo && (

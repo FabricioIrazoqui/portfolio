@@ -1,12 +1,21 @@
 import React from "react";
+import Image from "next/image";
+import Talk from "@/assets/talk-symbol-of-speech-bubbles-svgrepo-com.svg";
 
 const Lenguaje: React.FC = () => {
     return (
         <div className="md:p-10 p-4">
             <div className="flex gap-4 md:mb-8 mb-4 p-4 border-b-[0.5px]">
-                <h1 className="md:text-5xl text-4xl TextShadow font-medium">
+                <h1 className="md:text-5xl text-3xl TextShadow font-medium">
                     Lenguaje
                 </h1>
+                <Image
+                    src={Talk}
+                    alt={`Talk logo`}
+                    width={45}
+                    height={25}
+                    className="rounded-full bg-slate-100 p-2"
+                />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-color3 p-4 md:p-8">
                 <div className="flex md:gap-5 gap-2 items-center md:justify-start justify-center">
