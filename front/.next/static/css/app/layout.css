@@ -888,6 +888,10 @@ video {
   margin-top: 2.5rem;
 
 }
+.mb-2{
+  margin-bottom: 0.5rem;
+
+}
 .flex{
   display: flex;
 
@@ -1484,6 +1488,10 @@ video {
     margin-top: 1rem;
 
   }
+  .md\:mb-6{
+    margin-bottom: 1.5rem;
+
+  }
   .md\:size-\[100px\]{
     width: 100px;
     height: 100px;
@@ -1492,6 +1500,11 @@ video {
   .md\:size-\[190px\]{
     width: 190px;
     height: 190px;
+
+  }
+  .md\:size-\[50px\]{
+    width: 50px;
+    height: 50px;
 
   }
   .md\:h-8{

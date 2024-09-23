@@ -19,7 +19,7 @@ const About: React.FC = () => {
                             <span className=" md:text-4xl text-xl text-red-500 font-semibold">
                                 a Full Stack developer{" "}
                             </span>
-                            , and I love creating dynamic web applications. I am
+                            and I love creating dynamic web applications. I am
                             passionate about working on both the front-end and
                             back-end, using modern technologies such as
                             JavaScript, TypeScript, React, Node.js, and NestJS.

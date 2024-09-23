@@ -1,8 +1,9 @@
 .custom-svg {
-    width: 100px;
-    height: 100px;    
+    width: 50px;
+    height: 50px;    
     border-radius: 10px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 16px;
 }
 .bg-fff{
     background-color: #fff;
@@ -51,5 +52,6 @@
     .custom-svg {
         width: 35px;
         height: 35px;
+        margin-bottom: 8px;
     }
 }

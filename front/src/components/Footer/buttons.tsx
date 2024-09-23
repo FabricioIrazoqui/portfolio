@@ -5,7 +5,11 @@ import Link from "next/link";
 export const Buttons = () => {
     return (
         <div className="card">
-            <Link href="#" className="social-link1 " target="_blank">
+            <Link
+                href="https://discordapp.com/users/fabricio047258"
+                className="social-link1 "
+                target="_blank"
+            >
                 <svg
                     style={{ color: "white" }}
                     xmlns="http://www.w3.org/2000/svg"

@@ -17,7 +17,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, logo, skills }) => {
         <div className="md:p-10 p-4">
             <div>
                 <div className="flex gap-4 md:mb-8 mb-4 p-4 border-b-[0.5px]">
-                    <h2 className="md:text-5xl text-3xl TextShadow font-medium">
+                    <h2 className="md:text-4xl text-3xl TextShadow font-medium">
                         {title}
                     </h2>
                     {logo && (
@@ -45,7 +45,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, logo, skills }) => {
                                         alt={`${skill.name} icon`}
                                         width={100}
                                         height={100}
-                                        className="filter drop-shadow-[2px_3px_5px_rgba(0,0,0,0.9)] md:size-[100px] size-[35px]"
+                                        className="filter drop-shadow-[2px_3px_5px_rgba(0,0,0,0.9)] md:size-[50px] size-[35px] md:mb-4 mb-2"
                                     />
                                 )
                             ) : null}
