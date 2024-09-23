@@ -56,7 +56,9 @@ const ParentComponent: React.FC = () => {
                             </h2>
                             <ul>
                                 {proyect.lenguajes.map((l, i) => (
-                                    <li key={i}>{l}</li>
+                                    <li translate="no" key={i}>
+                                        {l}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -70,7 +72,9 @@ const ParentComponent: React.FC = () => {
                             </h2>
                             <ul>
                                 {proyect.frameworks.map((f, i) => (
-                                    <li key={i}>{f}</li>
+                                    <li translate="no" key={i}>
+                                        {f}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -84,7 +88,9 @@ const ParentComponent: React.FC = () => {
                             </h2>
                             <ul>
                                 {proyect.tools.map((t, i) => (
-                                    <li key={i}>{t}</li>
+                                    <li translate="no" key={i}>
+                                        {t}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -98,7 +104,9 @@ const ParentComponent: React.FC = () => {
                             </h2>
                             <ul>
                                 {proyect.libraries.map((l, i) => (
-                                    <li key={i}>{l}</li>
+                                    <li translate="no" key={i}>
+                                        {l}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -112,7 +120,9 @@ const ParentComponent: React.FC = () => {
                             </h2>
                             <ul>
                                 {proyect.database.map((d, i) => (
-                                    <li key={i}>{d}</li>
+                                    <li translate="no" key={i}>
+                                        {d}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -126,7 +136,9 @@ const ParentComponent: React.FC = () => {
                             </h2>
                             <ul>
                                 {proyect.cloudService.map((c, i) => (
-                                    <li key={i}>{c}</li>
+                                    <li translate="no" key={i}>
+                                        {c}
+                                    </li>
                                 ))}
                             </ul>
                         </div>

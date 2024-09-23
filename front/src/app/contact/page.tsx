@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
                         type="submit"
                         className="relative mt-10 w-full text-white font-bold p-2 rounded-md border-[0.5px] overflow-hidden group boxShadow"
                     >
-                        <span className="relative z-10 uppercase">SUBMIT</span>
+                        <span className="relative z-10 uppercase">SEND</span>
                         <div className="absolute inset-0 bg-color2 transition-all duration-700 ease-in-out group-hover:w-0"></div>
                         <div className="absolute inset-0 w-0 bg-color1 transition-all duration-700 ease-in-out group-hover:w-full"></div>
                     </button>

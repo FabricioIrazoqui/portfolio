@@ -18,7 +18,7 @@ const About: React.FC = () => {
                                 <span className=" md:text-4xl md:text-red-500">
                                     am
                                 </span>
-                            </span>{" "}
+                            </span>
                             a Full Stack developer, and I love creating dynamic
                             web applications. I am passionate about working on
                             both the front-end and back-end, using modern

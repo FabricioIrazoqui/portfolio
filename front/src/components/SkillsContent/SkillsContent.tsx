@@ -49,7 +49,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, logo, skills }) => {
                                     />
                                 )
                             ) : null}
-                            <p>{skill.name}</p>
+                            <p translate="no">{skill.name}</p>
                         </div>
                     ))}
                 </div>
