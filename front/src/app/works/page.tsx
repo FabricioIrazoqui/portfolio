@@ -172,13 +172,13 @@ const ParentComponent: React.FC = () => {
             <div className=" md:text-xl text-base md:text-white  text-black z-10 ">
                 <button
                     onClick={prev}
-                    className="md:p-3 p-1 md:left-4 left-2 fixed  top-[84%] md:top-1/2 bg-white md:bg-transparent hover:bg-white md:hover:text-black rounded-full z-50"
+                    className="md:p-3 p-1 md:left-4 left-2 fixed top-1/2 bg-white md:bg-transparent hover:bg-white md:hover:text-black rounded-full z-50"
                 >
                     Prev
                 </button>
                 <button
                     onClick={next}
-                    className="md:p-3 p-1 md:right-4 right-2  fixed top-[84%] md:top-1/2 bg-white md:bg-transparent hover:bg-white md:hover:text-black rounded-full z-50"
+                    className="md:p-3 p-1 md:right-4 right-2  fixed top-1/2 bg-white md:bg-transparent hover:bg-white md:hover:text-black rounded-full z-50"
                 >
                     Next
                 </button>
