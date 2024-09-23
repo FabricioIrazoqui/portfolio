@@ -15,7 +15,10 @@ const ParentComponent: React.FC = () => {
             className=" md:w-[90%] w-screen h-full flex flex-col m-auto"
         >
             {proyect.name ? (
-                <h2 className="md:text-4xl text-2xl TextShadow font-medium text-center md:mb-4 md:mt-4">
+                <h2
+                    translate="no"
+                    className="md:text-4xl text-2xl TextShadow font-medium text-center md:mb-4 md:mt-4"
+                >
                     {proyect.name}
                 </h2>
             ) : (
