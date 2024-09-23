@@ -7,23 +7,32 @@
 
 .carousel-content {
   display: flex;
-  width: 100%; /* Asegura que ocupe todo el ancho */
-  position: relative; /* Absoluto no es necesario si quieres mantener flujo flex */
+  width: 100%;
+  position: relative;
 }
 
 .cardWorks {
-  min-width: 100%;
-  height: auto;
-  display: none; /* Oculta las tarjetas que no son activas */
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transform: translateX(100%); /* Inicia fuera de la vista, a la derecha */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición de opacidad y desplazamiento */
+  z-index: 0;
 }
 
 .cardWorks.Active {
-  display: block; /* Solo la tarjeta activa es visible */
+  position: relative;
   opacity: 1;
+  transform: translateX(0); /* Vuelve a su lugar */
   z-index: 1;
+}
+
+.cardWorks.Exiting {
+  transform: translateX(-100%); /* Se desplaza hacia la izquierda al salir */
+  opacity: 0;
+  z-index: 0;
 }
 
 .carousel-indicators {
