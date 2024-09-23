@@ -13,9 +13,9 @@ const About: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center max-w-5xl">
                     <div className="md:col-span-3 flex flex-col items-start md:items-start">
                         <p className="text-left md:text-left max-w-2xl p-4">
-                            <span className="text-4xl md:text-6xl text-red-700 font-semibold">
+                            <span className=" md:text-6xl md:text-red-700 md:font-semibold">
                                 I
-                                <span className="text-3xl md:text-4xl text-red-500">
+                                <span className=" md:text-4xl md:text-red-500">
                                     am
                                 </span>
                             </span>{" "}
