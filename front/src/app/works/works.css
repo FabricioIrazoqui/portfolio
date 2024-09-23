@@ -17,20 +17,20 @@
   left: 0;
   width: 100%;
   opacity: 0;
-  transform: translateX(100%); /* Inicia fuera de la vista, a la derecha */
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición de opacidad y desplazamiento */
+  transform: translateX(100%); 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
   z-index: 0;
 }
 
 .cardWorks.Active {
   position: relative;
   opacity: 1;
-  transform: translateX(0); /* Vuelve a su lugar */
+  transform: translateX(0);
   z-index: 1;
 }
 
 .cardWorks.Exiting {
-  transform: translateX(-100%); /* Se desplaza hacia la izquierda al salir */
+  transform: translateX(-100%);
   opacity: 0;
   z-index: 0;
 }

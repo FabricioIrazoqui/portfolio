@@ -1,4 +1,4 @@
-/* Añade la clase nav-link con el subrayado */
+
 .nav-link {
     position: relative;
     color: inherit;
@@ -7,7 +7,6 @@
     transition: color 0.3s ease;
 }
 
-/* El elemento subrayado oculto por defecto */
 .nav-link::after {
     content: "";
     position: absolute;
@@ -21,12 +20,10 @@
     transition: transform 0.3s ease;
 }
 
-/* Hover: mostrar el subrayado */
 .nav-link:hover::after {
     transform: scaleX(1);
 }
 
-/* Cuando el enlace está activo, mantener el subrayado */
 .nav-link.active::after {
     transform: scaleX(1);
 }
