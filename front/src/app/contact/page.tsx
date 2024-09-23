@@ -55,6 +55,7 @@ const Contact: React.FC = () => {
                     type: "success",
                 });
                 reset();
+                setFormData({ name: "", email: "", message: "" });
             },
             (error) => {
                 console.error("FAILED...", error);
