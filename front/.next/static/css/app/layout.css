@@ -1456,10 +1456,6 @@ video {
     right: 2%;
 
   }
-  .md\:top-1\/2{
-    top: 50%;
-
-  }
   .md\:col-span-2{
     grid-column: span 2 / span 2;
 
