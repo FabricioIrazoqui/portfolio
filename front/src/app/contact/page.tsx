@@ -37,9 +37,9 @@ const Contact: React.FC = () => {
     });
 
     const onSubmit = (data: any) => {
-        const serviceID = process.env.EmailJs_ServiceID;
-        const templateID = process.env.EmailJs_TemplateID;
-        const publicKey = process.env.EmailJs_PublicKey;
+        const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLICKEY;
 
         if (!serviceID || !templateID || !publicKey) {
             return {
