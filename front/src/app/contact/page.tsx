@@ -37,9 +37,16 @@ const Contact: React.FC = () => {
     });
 
     const onSubmit = (data: any) => {
-        const serviceID = "service_ftqxrct";
-        const templateID = "template_1fs0iys";
-        const publicKey = "RuJagDA7kbPlP4icq";
+        const serviceID = process.env.EmailJs_ServiceID;
+        const templateID = process.env.EmailJs_TemplateID;
+        const publicKey = process.env.EmailJs_PublicKey;
+
+        if (!serviceID || !templateID || !publicKey) {
+            return {
+                message: "Configuration error. Please contact support.",
+                type: "error",
+            };
+        }
 
         const emailData = {
             to_name: "Fabricio",
